@@ -25,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Music-App</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Proyecto 2</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -39,7 +39,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Acerca De</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Más sobre ti</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Buscar artistas</a>
           </li>
         </ul>
       </div>
@@ -111,7 +111,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/disco.png" alt="">
+            <img class="img-fluid" src="img/portfolio/pop.png" alt="">
           </div>
         </div>
 
@@ -162,7 +162,7 @@
     <div class="container">
 
       <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Más sobre ti</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Buscar artistas</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -181,39 +181,38 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Género 1</label>
-                <input class="form-control" id="name" type="text" placeholder="Género 1" required="required">
-                <p class="help-block text-danger"></p>
+                <input class="form-control" id="genre_1" type="text" placeholder="Género 1">
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Género 2</label>
-                <input class="form-control" id="name" type="text" placeholder="Género 2" required="required">
-                <p class="help-block text-danger"></p>
+                <input class="form-control" id="genre_2" type="text" placeholder="Género 2">
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Género 3</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Género 3" required="required">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Género 4</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Género 4" required="required"></textarea>
-                <p class="help-block text-danger"></p>
+                <input class="form-control" id="genre_3" type="text" placeholder="Género 3">
               </div>
             </div>
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Enviar</button>
+              <input type="button" class="btn btn-primary form-control" id="enviar" value="Enviar">
             </div>
           </form>
         </div>
       </div>
+
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-lg-4"></div>
+          <div class="col-lg-4" id="artistas">
+          </div>
+        <div class="col-lg-4"></div>
+      </div>
+      <!--  End content row -->
 
     </div>
   </section>
@@ -225,13 +224,13 @@
 
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">UVG</p>
+          <h4 class="text-uppercase mb-4">Ubicacion</h4>
+          <img class="simbolo" src="img/uvg.png" alt>
         </div>
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <h4 class="text-uppercase mb-4">Por Internet</h4>
           <a class="btn btn-outline-light btn-social mx-1" href="#">
             <i class="fab fa-fw fa-facebook-f"></i>
           </a>
@@ -297,10 +296,10 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/guitarra.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-5">Estilo musical nacido en la década de 1960 como derivación del rock and roll y que se caracteriza por el empleo de melodías y ritmos complejos, con una instrumentación bastante fija (básicamente guitarra eléctrica, bajo eléctrico, teclado y batería) y con un ritmo enérgico subrayado por la potencia del bajo y la batería, todo ello a menudo ligado a una actitud antiautoritaria y provocativa; ha desarrollado multitud de variantes y ha dado paso a nuevos estilos, como el pop, el punk o el heavy.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Cerrar ventana
                 </button>
               </div>
             </div>
@@ -334,12 +333,12 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/disco.png" alt="">
+                <img class="img-fluid rounded mb-5" src="img/portfolio/pop.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-5">Estilo musical nacido en la década de 1960, que tiene elementos de la música rock y de la música popular británica y se caracteriza por su estructura sencilla y directa y por la especial importancia que se concede a la melodía.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Cerrar ventana
                 </button>
               </div>
             </div>
@@ -375,10 +374,10 @@
                 <!-- Portfolio Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/portfolio/rap.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <p class="mb-5">Estilo de música de baile nacido en la década de 1980 en los barrios negros e hispanos de Nueva York y otras grandes urbes estadounidenses como derivación del funk y asociado a la cultura hip-hop; se caracteriza por su ritmo monótono y muy sincopado, sus largos textos cantados casi de manera monologada y sus letras radicales sobre temas como la violencia, la lucha contra el sistema establecido, el sexo, el machismo o el trabajo.</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
-                  Close Window
+                  Cerrar ventana
                 </button>
               </div>
             </div>
@@ -516,7 +515,7 @@
   <script src="js/jqBootstrapValidation.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/freelancer.min.js"></script>
+  <script src="js/freelancer.js"></script>
 
 </body>
 

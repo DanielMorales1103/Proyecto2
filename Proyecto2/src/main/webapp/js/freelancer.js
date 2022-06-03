@@ -60,4 +60,25 @@
     });
   });
 
+//Evento del botón que me devuelve el listado de películas de un determinado actor
+	$("#enviar").click(function(){
+				
+		$.ajax( {
+			
+			type: "GET",
+			url: '/Proyecto2/artistasGenero?genre_1=' + $('#genre_1').val() + '&genre_2=' + $('#genre_2').val() + '&genre_3=' + $('#genre_3').val(),
+			success: function(data) {
+				//alert("Result jkj");
+			    var htmlMovieList = '<ul>';
+				$.each(data.peliculas, function(i,item){
+					  htmlMovieList += '<li>' + item + '</li>';
+				});
+				htmlMovieList += '</ul>';
+				$('#artistas').html("");
+				$('#artistas').append(htmlMovieList);
+			}
+		} );
+		
+		
+	});
 })(jQuery); // End of use strict
