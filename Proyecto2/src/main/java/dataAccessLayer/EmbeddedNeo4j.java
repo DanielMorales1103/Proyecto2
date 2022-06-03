@@ -56,34 +56,7 @@ public class EmbeddedNeo4j implements AutoCloseable{
         }
     }
     
-    public LinkedList<String> getActors()
-    {
-    	 try ( Session session = driver.session() )
-         {
-    		 
-    		 
-    		 LinkedList<String> actors = session.readTransaction( new TransactionWork<LinkedList<String>>()
-             {
-                 @Override
-                 public LinkedList<String> execute( Transaction tx )
-                 {
-                     Result result = tx.run( "MATCH (people:Person) RETURN people.name");
-                     LinkedList<String> myactors = new LinkedList<String>();
-                     List<Record> registros = result.list();
-                     for (int i = 0; i < registros.size(); i++) {
-                    	 //myactors.add(registros.get(i).toString());
-                    	 myactors.add(registros.get(i).get("people.name").asString());
-                     }
-                     
-                     return myactors;
-                 }
-             } );
-             
-             return actors;
-         }
-    }
-    
-    public LinkedList<String> getMoviesByActor(String cantante)
+    public LinkedList<String> getArtistasPorGenero(String g1, String g2,String g3)
     {
    	 try ( Session session = driver.session() )
         {
@@ -94,15 +67,27 @@ public class EmbeddedNeo4j implements AutoCloseable{
                 @Override
                 public LinkedList<String> execute( Transaction tx )
                 {
-                    Result result = tx.run( "MATCH (tom:Person {name: \"" + cantante + "\"})-[:Canta]->(cantante) RETURN cantante.title");
-                    LinkedList<String> myactors = new LinkedList<String>();
-                    List<Record> registros = result.list();
+                	Result result1 = tx.run( "MATCH (people:Person)-[Canta]-(:Genero {title:'" + g1 + "'}) RETURN people.name");
+                	Result result2 = tx.run( "MATCH (people:Person)-[Canta]-(:Genero {title:'" + g2 + "'}) RETURN people.name");
+                	Result result3 = tx.run( "MATCH (people:Person)-[Canta]-(:Genero {title:'" + g3 + "'}) RETURN people.name");
+                    LinkedList<String> artistas = new LinkedList<String>();
+                    List<Record> registros = result1.list();
                     for (int i = 0; i < registros.size(); i++) {
-                   	 //myactors.add(registros.get(i).toString());
-                   	 myactors.add(registros.get(i).get("cantante.title").asString());
+                   	 artistas.add(registros.get(i).get("people.name").asString());
+                    }
+                    registros = result2.list();
+                    for (int i = 0; i < registros.size(); i++) {
+                   	 artistas.add(registros.get(i).get("people.name").asString());
+                    }
+                    registros = result3.list();
+                    for (int i = 0; i < registros.size(); i++) {
+                   	 artistas.add(registros.get(i).get("people.name").asString());
                     }
                     
-                    return myactors;
+                    Controlador controlador = new Controlador();
+                    artistas = controlador.recomendacion(artistas);
+                    
+                    return artistas;
                 }
             } );
             
