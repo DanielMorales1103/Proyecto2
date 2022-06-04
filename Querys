@@ -1,102 +1,269 @@
-CREATE (Reggaeton:Genero {title:'Reggaeton'})
-      CREATE (Maluma:Person {name:'Maluma'})
-      CREATE (Bunny:Person {name:'Bad Bunny'})
-      CREATE (Karol:Person {name:'Karol G'})
-      CREATE (Balvin:Person {name:'J Balvin'})
-      CREATE (Daddy:Person {name:'Daddy Yankee'})
-      CREATE (Raw:Person {name:'Raw Alejandro'})
-      CREATE (Omar:Person {name:'Don Omar'})
-      CREATE (Myke:Person {name:'Myke Towers'})
-      CREATE (Nicky:Person {name:'Nicky Jam'})
-      CREATE (Becky:Person {name:'Backy G'})
-
-      
-      CREATE
-      (Maluma)-[:Canta]->(Reggaeton),
-      (Bunny)-[:Canta]->(Reggaeton),
-      (Karol)-[:Canta]->(Reggaeton),
-      (Balvin)-[:Canta]->(Reggaeton),
-      (Daddy)-[:Canta]->(Reggaeton),
-      (Raw)-[:Canta]->(Reggaeton),
-      (Omar)-[:Canta]->(Reggaeton),
-      (Myke)-[:Canta]->(Reggaeton),
-      (Nicky)-[:Canta]->(Reggaeton),
-      (Becky)-[:Canta]->(Reggaeton)
-
-     
- 
+CREATE (electropop:Genero {title:'Electropop'})
+CREATE (Gaga:Person {name:'Lady Gaga'})
+CREATE (Minogue:Person {name:'Kylie Minogue'})
+CREATE (Ladytron:Person {name:'Ladytron'})
+CREATE (Roux:Person {name:'La Roux'})
+CREATE (Kesha:Person {name:'Kesha'})
+CREATE (Yelle:Person {name:'Yelle'})
+CREATE (Dragonette:Person {name:'Dragonette'})
+CREATE (Boys:Person {name:'Junior Boys'})
+CREATE (Byorn:Person {name:'Nuelfe Byorn'})
+CREATE (Sky:Person {name:'Sky Ferreira'})
+CREATE (Robyn:Person {name:'Robyn'})
 CREATE (PopL:Genero {title:'Pop Latino'})
-      CREATE (Shakira:Person {name:'Shakira'})
-      CREATE (Enrique:Person {name:'Enrique Iglesias'})
-      CREATE (Ricky:Person {name:'Riquy Martin'})
-      CREATE (Natti:Person {name:'Natti Natasha'})
-      CREATE (Yatra:Person {name:'Sebastian Yatra'})
-      CREATE (Fonsi:Person {name:'Luis Fons'})
-      CREATE (Jennifer:Person {name:'Jennifer Lopez'})
-      CREATE (Anitta:Person {name:'Anitta'})
-      CREATE (Miguel:Person {name:'Miguel Bose'})
-      
-
-      
-      CREATE
-      (Shakira)-[:Canta]->(PopL),
-      (Enrique)-[:Canta]->(PopL),
-      (Ricky)-[:Canta]->(PopL),
-      (Natti)-[:Canta]->(PopL),
-      (Yatra)-[:Canta]->(PopL),
-      (Fonsi)-[:Canta]->( PopL),
-      (Jennifer)-[:Canta]->(PopL),
-      (Anitta)-[:Canta]->(PopL),
-      (Miguel)-[:Canta]->(PopL)
-    
- 
+CREATE (Shakira:Person {name:'Shakira'})
+CREATE (Enrique:Person {name:'Enrique Iglesias'})
+CREATE (Ricky:Person {name:'Riquy Martin'})
+CREATE (Natti:Person {name:'Natti Natasha'})
+CREATE (Yatra:Person {name:'Sebastian Yatra'})
+CREATE (Fonsi:Person {name:'Luis Fonsi'})
+CREATE (Jennifer:Person {name:'Jennifer Lopez'})
+CREATE (Anitta:Person {name:'Anitta'})
+CREATE (Miguel:Person {name:'Miguel Bose'})
+CREATE (Chayanne:Person {name:'Chayanne'})
+CREATE (Thalia:Person {name:'Thalia'})
+CREATE (Paulina:Person {name:'Paulina Rubio'})
+CREATE (Sanz:Person {name:'Alejandro Sanz'})
+CREATE (Belinda:Person {name:'Belinda'})
+CREATE (Arjona:Person {name:'Ricardo Arjona'})
+CREATE (Marc:Person {name:'Marc Anthony'})
 CREATE (PopI:Genero {title:'Pop en Ingles'})
-      CREATE (Dua:Person {name:'Dua Lipa'})
-      CREATE (Harry:Person {name:'Harry Styles'})
-      CREATE (Billie:Person {name:'Billie Eilish'})
-      CREATE (Nunatak:Person {name:'Nunatak'})
-      CREATE (Dora:Person {name:'Dora'})
-      CREATE (Maggie:Person {name:'Maggie Rogers'})
-      CREATE (Veintiuno:Person {name:'Veintiuno'})
-      CREATE (Banoffee:Person {name:'Banoffee'})
-      CREATE (Beret:Person {name:'Beret'})
-      CREATE (Aitana:Person {name:'Aitana Ocaña'})
+CREATE (Dua:Person {name:'Dua Lipa'})
+CREATE (Harry:Person {name:'Harry Styles'})
+CREATE (Billie:Person {name:'Billie Eilish'})
+CREATE (Nunatak:Person {name:'Nunatak'})
+CREATE (Dora:Person {name:'Dora'})
+CREATE (Maggie:Person {name:'Maggie Rogers'})
+CREATE (Veintiuno:Person {name:'Veintiuno'})
+CREATE (Banoffee:Person {name:'Banoffee'})
+CREATE (Beret:Person {name:'Beret'})
+CREATE (Aitana:Person {name:'Aitana Ocaña'})
 
-      
-      CREATE
-      (Dua)-[:Canta]->(PopI),
-      (Harry)-[:Canta]->( PopI),
-      (Billie)-[:Canta]->( PopI),
-      (Nunatak)-[:Canta]->( PopI),
-      (Dora)-[:Canta]->( PopI),
-      (Maggie)-[:Canta]->( PopI),
-      (Veintiuno)-[:Canta]->( PopI),
-      (Banoffee)-[:Canta]->( PopI),
-      (Beret)-[:Canta]->( PopI),
-      (Aitana)-[:Canta]->( PopI)
- 
 CREATE (Electronica:Genero {title:'Electronica'})
-      CREATE (Avicci:Person {name:'Avicci'})
-      CREATE (Garrix:Person {name:'Martin Garrix'})
-      CREATE (Skrillex:Person {name:'Skrillex'})
-      CREATE (David:Person {name:'David Guetta'})
-      CREATE (Tiesto:Person {name:'Tiësto'})
-      CREATE (Marshmello:Person {name:'Marshmello'})
-      CREATE (Deadmau:Person {name:'Deadmau5'})
-      CREATE (Afrojack:Person {name:'Afrojack'})
-      CREATE (Alan:Person {name:'Alan Walker'})
-      CREATE (Kraftwerk:Person {name:'Kraftwerk'})
+CREATE (Avicci:Person {name:'Avicci'})
+CREATE (Garrix:Person {name:'Martin Garrix'})
+CREATE (Skrillex:Person {name:'Skrillex'})
+CREATE (David:Person {name:'David Guetta'})
+CREATE (Tiesto:Person {name:'Tiësto'})
+CREATE (Marshmello:Person {name:'Marshmello'})
+CREATE (Deadmau:Person {name:'Deadmau5'})
+CREATE (Afrojack:Person {name:'Afrojack'})
+CREATE (Alan:Person {name:'Alan Walker'})
+CREATE (Kraftwerk:Person {name:'Kraftwerk'})
 
-      
-      CREATE
-      (Avicci)-[:Canta]->(Electronica),
-      (Garrix)-[:Canta]->( Electronica),
-      (Skrillex)-[:Canta]->( Electronica),
-      (David)-[:Canta]->( Electronica),
-      (Tiesto)-[:Canta]->( Electronica),
-      (Marshmello)-[:Canta]->( Electronica),
-      (Deadmau)-[:Canta]->( Electronica),
-      (Afrojack)-[:Canta]->( Electronica),
-      (Alan)-[:Canta]->( Electronica),
-      (Kraftwerk)-[:Canta]->( Electronica)
+CREATE (Oliver:Person {name:'Oliver Heldens'})
+CREATE (Vintage:Person {name:'Vintage Culture'})
+CREATE (Imanu:Person {name:'Imanu'})
+CREATE (Illenuim:Person {name:'Illenuim'})
+CREATE (Snake:Person {name:'DJ Snake'})
+CREATE (Porter:Person {name:'Porter Robinson'})
+CREATE (Camelphat:Person {name:'Camelphat'})
+CREATE (Ki:Person {name:'Ki/Ki'})
+CREATE (Otik:Person {name:'Otik'})
+CREATE (Tita:Person {name:'Tita Lau'})
+CREATE (Lane8:Person {name:'Lane8'})
+CREATE (Kryder:Person {name:'Kryder'})
+CREATE (Stalin:Person {name:'Stalin'})
+CREATE (Artbat:Person {name:'Artbat'})
+CREATE (Yotto:Person {name:'Yotto'})
 
+
+CREATE (Rock:Genero {title:'Rock'})
+CREATE (Doors:Person {name:'The Doors'})
+CREATE (Zeppelin:Person {name:'Led Zeppelin'})
+CREATE (Green:Person {name:'Green Day'})
+CREATE (Sabbath:Person {name:'Black Sabbath'})
+CREATE (Clapton:Person {name:'Eric Clapton'})
+CREATE (Hendrix:Person {name:'Jimi Hendrix'})
+CREATE (Stones:Person {name:'The Rolling Stones'})
+CREATE (Silencio:Person {name:'Héroes del Silencio'})
+CREATE (Cream:Person {name:'Cream'})
+CREATE (Rap:Genero {title:'Rap'})
+CREATE (Kase:Person {name:'Kase O'})
+CREATE (ToteKing:Person {name:'ToteKing'})
+CREATE (Tangana:Person {name:'Tangana'})
+CREATE (Nach:Person {name:'Nach'})
+CREATE (Foyone:Person {name:'Foyone'})
+CREATE (Rapsusklei:Person {name:'Rapsusklei'})
+CREATE (Yung:Person {name:'Yung Beef'})
+CREATE (Bejo:Person {name:'Bejo'})
+CREATE (Rayden:Person {name:'Rayden'})
+CREATE (Porta:Person {name:'Porta'})
+CREATE (Metal:Genero {title:'Metal'})
+CREATE (Tool:Person {name:'Tool'})
+CREATE (Opeth:Person {name:'Opeth'})
+CREATE (Rammstein:Person {name:'Rammstein'})
+CREATE (System:Person {name:'System of a Down'})
+CREATE (Korn:Person {name:'Korn'})
+CREATE (Mastodon:Person {name:'Mastodon'})
+CREATE (Linkin:Person {name:'Linkin Park'})
+CREATE (Disturbed:Person {name:'Disturbed'})
+CREATE (Marilyn:Person {name:'Marilyn Manson'})
+CREATE (Anthrax:Person {name:'Anthrax'})
+CREATE (Trivium:Person {name:'Trivium'})
+CREATE (Killswitch:Person {name:'Killswitch Engage'})
+CREATE (Suicide:Person {name:'Suicide Silence'})
+CREATE (Bad:Person {name:'Bad Omens'})
+CREATE (BMTH:Person {name:'Bring Me The Horizon'})
+CREATE (Mega:Person {name:'Megadeth'})
+CREATE (Metallica:Person {name:'Metallica'})
+CREATE (Iron:Person {name:'Iron Maiden'})
+CREATE (Hello:Person {name:'Helloween'})
+CREATE (Reggaeton:Genero {title:'Reggaeton'})
+CREATE (Maluma:Person {name:'Maluma'})
+CREATE (Bunny:Person {name:'Bad Bunny'})
+CREATE (Karol:Person {name:'Karol G'})
+CREATE (Balvin:Person {name:'J Balvin'})
+CREATE (Daddy:Person {name:'Daddy Yankee'})
+CREATE (Raw:Person {name:'Raw Alejandro'})
+CREATE (Omar:Person {name:'Don Omar'})
+CREATE (Myke:Person {name:'Myke Towers'})
+CREATE (Nicky:Person {name:'Nicky Jam'})
+CREATE (Becky:Person {name:'Becky G'})
+
+CREATE
+(Tool)-[:Canta]->(Metal),
+(Opeth)-[:Canta]->(Metal),
+(Rammstein)-[:Canta]->(Metal),
+(System)-[:Canta]->(Metal),
+(Korn)-[:Canta]->(Metal),
+(Mastodon)-[:Canta]->(Metal),
+(Linkin)-[:Canta]->(Metal),
+(Disturbed)-[:Canta]->(Metal),
+(Marilyn)-[:Canta]->(Metal),
+(Anthrax)-[:Canta]->(Metal),
+(Trivium)-[:Canta]->(Metal),
+(Killswitch)-[:Canta]->(Metal),
+(Suicide)-[:Canta]->(Metal),
+(Bad)-[:Canta]->(Metal),
+(BMTH)-[:Canta]->(Metal),
+(Iron)-[:Canta]->(Metal),
+(Mega)-[:Canta]->(Metal),
+(Metallica)-[:Canta]->(Metal),
+(Hello)-[:Canta]->(Metal),
+(Suicide)-[:Canta]->(Rock),
+(Bad)-[:Canta]->(Rock),
+(BMTH)-[:Canta]->(Rock),
+(Iron)-[:Canta]->(Rock),
+(Mega)-[:Canta]->(Rock),
+(Metallica)-[:Canta]->(Rock),
+(Hello)-[:Canta]->(Rock),
+(Maluma)-[:Canta]->(Reggaeton),
+(Bunny)-[:Canta]->(Reggaeton),
+(Karol)-[:Canta]->(Reggaeton),
+(Balvin)-[:Canta]->(Reggaeton),
+(Daddy)-[:Canta]->(Reggaeton),
+(Raw)-[:Canta]->(Reggaeton),
+(Veintiuno)-[:Canta]->(Reggaeton),
+(Omar)-[:Canta]->(Reggaeton),
+(Myke)-[:Canta]->(Reggaeton),
+(Nicky)-[:Canta]->(Reggaeton),
+(Becky)-[:Canta]->(Reggaeton),
+(Avicci)-[:Canta]->(electropop),
+(Garrix)-[:Canta]->(electropop),
+(David)-[:Canta]->(electropop),
+(Gaga)-[:Canta]->(electropop),
+(Afrojack)-[:Canta]->(electropop),
+(Minogue)-[:Canta]->(electropop),
+(Ladytron)-[:Canta]->(electropop),
+(Roux)-[:Canta]->(electropop),
+(Kesha)-[:Canta]->(electropop),
+(Yelle)-[:Canta]->(electropop),
+(Dragonette)-[:Canta]->(electropop),
+(Boys)-[:Canta]->(electropop),
+(Byorn)-[:Canta]->(electropop),
+(Sky)-[:Canta]->(electropop),
+(Robyn)-[:Canta]->(electropop),
+(Harry)-[:Canta]->(electropop),
+(Chayanne)-[:Canta]->(PopL),
+(Shakira)-[:Canta]->(PopL),
+(Maluma)-[:Canta]->(PopL),
+(Enrique)-[:Canta]->(PopL),
+(Ricky)-[:Canta]->(PopL),
+(Natti)-[:Canta]->(PopL),
+(Yatra)-[:Canta]->(PopL),
+(Fonsi)-[:Canta]->( PopL),
+(Jennifer)-[:Canta]->(PopL),
+(Anitta)-[:Canta]->(PopL),
+(Miguel)-[:Canta]->(PopL),
+(Silencio)-[:Canta]->(PopL),
+(Thalia)-[:Canta]->(PopL),
+(Paulina)-[:Canta]->(PopL),
+(Sanz)-[:Canta]->(PopL),
+(Belinda)-[:Canta]->(PopL),
+(Arjona)-[:Canta]->(PopL),
+(Marc)-[:Canta]->(PopL),
+(Becky)-[:Canta]->(PopL),
+(Dua)-[:Canta]->(PopI),
+(Harry)-[:Canta]->( PopI),
+(Billie)-[:Canta]->( PopI),
+(Nunatak)-[:Canta]->( PopI),
+(Dora)-[:Canta]->( PopI),
+(Maggie)-[:Canta]->( PopI),
+(Veintiuno)-[:Canta]->( PopI),
+(Banoffee)-[:Canta]->( PopI),
+(Beret)-[:Canta]->( PopI),
+(Aitana)-[:Canta]->( PopI),
+(Cream)-[:Canta]->( PopI),
+(Avicci)-[:Canta]->(PopI),
+(Garrix)-[:Canta]->(PopI),
+(David)-[:Canta]->(PopI),
+(Oliver)-[:Canta]->( PopI),
+(Illenuim)-[:Canta]->( PopI),
+(Ki)-[:Canta]->( PopI),
+(Otik)-[:Canta]->( PopI),
+(Lane8)-[:Canta]->( PopI),
+(Avicci)-[:Canta]->(Electronica),
+(Garrix)-[:Canta]->( Electronica),
+(Skrillex)-[:Canta]->( Electronica),
+(David)-[:Canta]->( Electronica),
+(Tiesto)-[:Canta]->( Electronica),
+(Marshmello)-[:Canta]->( Electronica),
+(Deadmau)-[:Canta]->( Electronica),
+(Afrojack)-[:Canta]->( Electronica),
+(Alan)-[:Canta]->( Electronica),
+(Kraftwerk)-[:Canta]->( Electronica),
+(Oliver)-[:Canta]->( Electronica),
+(Vintage)-[:Canta]->( Electronica),
+(Imanu)-[:Canta]->( Electronica),
+(Illenuim)-[:Canta]->( Electronica),
+(Snake)-[:Canta]->( Electronica),
+(Porter)-[:Canta]->( Electronica),
+(Camelphat)-[:Canta]->( Electronica),
+(Ki)-[:Canta]->( Electronica),
+(Otik)-[:Canta]->( Electronica),
+(Tita)-[:Canta]->( Electronica),
+(Lane8)-[:Canta]->( Electronica),
+(Kryder)-[:Canta]->( Electronica),
+(Stalin)-[:Canta]->( Electronica),
+(Artbat)-[:Canta]->( Electronica),
+(Yotto)-[:Canta]->( Electronica),
+(Doors)-[:Canta]->(Rock),
+(Zeppelin)-[:Canta]->(Rock),
+(Green)-[:Canta]->(Rock),
+(Sabbath)-[:Canta]->(Rock),
+(Clapton)-[:Canta]->(Rock),
+(Hendrix)-[:Canta]->(Rock),
+(Stones)-[:Canta]->(Rock),
+(Silencio)-[:Canta]->(Rock),
+(Cream)-[:Canta]->(Rock),
+(Kraftwerk)-[:Canta]->(Rock),
+(Imanu)-[:Canta]->( Rock),
+(Porter)-[:Canta]->(Rock),
+(Tita)-[:Canta]->( Rock),
+(Stalin)-[:Canta]->( Rock),
+(Artbat)-[:Canta]->( Rock),
+(Yotto)-[:Canta]->( Rock),
+(Kase)-[:Canta]->(Rap),
+(ToteKing)-[:Canta]->(Rap),
+(Tangana)-[:Canta]->(Rap),
+(Bunny)-[:Canta]->(Rap),
+(Maluma)-[:Canta]->(Rap),
+(Daddy)-[:Canta]->(Rap),
+(Nach)-[:Canta]->(Rap),
+(Foyone)-[:Canta]->(Rap),
+(Rapsusklei)-[:Canta]->(Rap),
+(Yung)-[:Canta]->(Rap),
+(Bejo)-[:Canta]->(Rap),
+(Rayden)-[:Canta]->(Rap),
+(Porta)-[:Canta]->(Rap)
